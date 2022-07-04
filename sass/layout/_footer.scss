@@ -1,0 +1,20 @@
+.footer {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background-color: $bgDark;
+  &__container {
+    display: flex;
+    align-items: baseline;
+  }
+  &__soc-media {
+    margin-left: 70px;
+  }
+  &__text {
+    margin-bottom: 20px;
+    @include font(inherit, 700, 14px, 16px, 00.03em, $textWhite);
+    text-transform: uppercase;
+  }
+  &__subscribe {
+    margin-left: auto;
+  }
+}

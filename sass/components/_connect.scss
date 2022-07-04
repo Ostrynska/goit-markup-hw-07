@@ -1,0 +1,56 @@
+.connect {
+  margin-left: auto;
+  font-style: normal;
+  &-footer {
+    margin-top: 20px;
+  }
+  &__list {
+    @include centeredFlex(flex);
+    &--footer {
+      display: list-item;
+    }
+  }
+  &__item {
+    &:last-child {
+    margin-left: 30px;
+    }    
+    &--footer:not(:last-child) {
+    margin-bottom: 9px;
+    }
+    &--footer:last-child {
+      margin-left: 0;
+    }
+  }
+  &__icons {
+    fill: currentColor;
+    margin-right: 10px;
+  }
+  &__link {
+    @include centeredFlex(flex);
+    padding-top: 32px;
+    padding-bottom: 32px;
+    @include font(inherit, 500, 14px, 16px, 0.02em, $textSecondary);
+    @include transition(null, null, color, 250ms, cubic-bezier(0.4, 0, 0.2, 1));
+    &:hover,
+    &:focus {
+      color: $colorAccent;
+    }
+    &--footer {
+      padding: 0;
+      margin-left: 0;
+      justify-content: flex-start;
+      align-items: flex-start;
+      flex-direction: column;
+      @include font(inherit, 400, 14px, 24px, 0.03em, $textTransparent);
+      @include transition(null, null, color, 250ms, cubic-bezier(0.4, 0, 0.2, 1));
+    }
+  }
+  &__address {
+    @include font('Roboto', 400, 14px, 24px, 00.03em, $textWhite);
+    @include transition(null, null, color, 250ms, cubic-bezier(0.4, 0, 0.2, 1));
+    &:hover,
+    &:focus {
+      color: $colorAccent;
+    }
+  }
+}

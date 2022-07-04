@@ -1,0 +1,27 @@
+.team {
+  background-color: $bgLight;
+  &__title {
+    margin-bottom: 50px;
+  }
+  &__member {
+    margin-bottom: 10px;
+    @include font(inherit, 500, 16px, 19px, 0.03em, $textMain);
+  }
+  &__content {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    display: block;
+    text-align: center;
+    @include boxShadow();
+  }
+  &__list {
+    @include centeredFlex(flex);
+  }
+  &__item {
+    margin-bottom: 16px;
+    @include font(inherit, 400, 16px, 19px, 0.03em, $textSecondary);
+  }
+  &__items:not(:last-child) {
+    margin-right: 30px;
+  }
+}

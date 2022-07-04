@@ -1,0 +1,3 @@
+.logo {
+  @include font('Raleway', 700, 26px, 31px, 0.03em, $colorAccent);
+}

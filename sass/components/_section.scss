@@ -1,0 +1,7 @@
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+  &:nth-of-type(3) {
+    padding-top: 0;
+  }
+}

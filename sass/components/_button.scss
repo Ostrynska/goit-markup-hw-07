@@ -1,0 +1,50 @@
+.button {
+  @include btnL(inline-block);
+  @include transition(null, null, background-color, 250ms, cubic-bezier(0.4, 0, 0.2, 1));
+  &:hover,
+  &:focus {
+    @include btnHoverFocus(null, $bgHover);
+  }
+  &-close {
+    @include btnS();
+    @include centeredFlex(flex);
+    &:hover,
+    &:focus {
+      fill: $colorAccent;
+    }
+  }
+  &-modal {
+    display: block;
+    margin: 0 auto;
+    @include btnHoverFocus(null, null);
+  }
+  &__icon--end {
+    margin-left: 10px;
+    fill: currentColor;
+  }
+  &-icon {
+      @include centeredFlex(inline-flex);
+      margin-left: 12px;
+      color: $textWhite;
+    }
+  }
+
+.buttons {
+  &-list {
+    @include centeredFlex(flex);
+    margin-bottom: 50px;
+  }
+  &__item:not(:last-child) {
+    margin-right: 8px;
+  }
+  &__portfolio {
+    @include btnM(inline-block);
+    @include transition(color, background-color, box-shadow, 250ms, cubic-bezier(0.4, 0, 0.2, 1));
+    &:hover,
+    &:focus {
+      @include btnHoverFocus($textWhite, $colorAccent);
+    }
+    &--current {
+    @include btnHoverFocus($textWhite, $colorAccent);
+  }}
+}

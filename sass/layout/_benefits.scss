@@ -1,0 +1,27 @@
+.benefits {
+  &__list {
+    @include centeredFlex(flex);
+  }
+  &__item {
+    width: 270px;
+    justify-content: center;
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
+  }
+  &__icons {
+    margin-bottom: 30px;
+    @include centeredFlex(flex);
+    border-radius: 4px;
+    height: 120px;
+    background-color: $bgLight;
+  }
+  &__title {
+    margin-bottom: 10px;
+    @include font(inherit, 700, 14px, 16px, 0.03em, $textMain);
+    text-transform: uppercase;
+  }
+  &__text {
+    @include font(inherit, 400, 14px, 24px, 0.03em, $textSecondary);
+  }
+}
